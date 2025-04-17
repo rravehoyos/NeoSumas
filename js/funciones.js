@@ -11,7 +11,7 @@ velocidad=[2,2,2,2]
 posicionCaen=[0,0,0,0]
 numerosCalcul=[0,0,0]
 puntos=0
-tiempo=500
+tiempo=60
 racha=0
 bandera1=0
 
