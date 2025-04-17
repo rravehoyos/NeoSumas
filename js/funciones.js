@@ -11,12 +11,13 @@ velocidad=[2,2,2,2]
 posicionCaen=[0,0,0,0]
 numerosCalcul=[0,0,0]
 puntos=0
-tiempo=60
+tiempo=500
 racha=0
 bandera1=0
 
 
 function inicio() {
+
 	numerosCalcul[0]= Math.floor((Math.random() * (11-4))+4)
 	numerosCalcul[1]= Math.floor((Math.random() * (11-4))+4)
 	numerosCalcul[2]= Math.floor((Math.random() * (11-4))+4)
@@ -49,7 +50,7 @@ function inicio() {
       return copia;
 }
 
-inicio()
+
 function GenerarNumeros() {
 	let numerosCaida = document.getElementById("zonaCaida")
 	for (let i = 0; i < 4; i++) {
@@ -259,6 +260,7 @@ function acumulador(valor,sele){
 	nuevoNumero.textContent = valor;
 	nuevoNumero.classList.add("newValor")
 	//caida 0
+	mover.play()
 	if(posicionCaen[0]<=20 && sele=="caida0"){
 		calculo1.appendChild(nuevoNumero)
 	}
@@ -319,17 +321,19 @@ function sumarContenidos1() {
 	if(suma==parseInt(zonaTotal1.innerHTML)){
 		puntos+=10
 		racha++
+		bueno.play()
 		pantallaMuerte()
-		zonaPuntos.innerHTML=puntos+"/"+racha
+		zonaPuntos.innerHTML="<spam>puntos:  </spam>"+puntos+"/"+racha
 		if(racha>=2){
 			racha=0
 			tiempo+=30
-			zonaTiempo.innerHTML=	tiempo
+			zonaTiempo.innerHTML="seg: "+	tiempo
 		}
 	}
 	else{
 		tiempo-=5
-		zonaTiempo.innerHTML=	tiempo
+		malo.play()
+		zonaTiempo.innerHTML="seg: "+	tiempo
 	}
 	numerosCalcul[0]= Math.floor((Math.random() * (11-4))+4)
 	zonaTotal1.innerHTML=numerosCalcul[0]
@@ -348,17 +352,19 @@ function sumarContenidos2() {
 	if(suma==parseInt(zonaTotal2.innerHTML)){
 		puntos+=10
 		racha++
+		bueno.play()
 		pantallaMuerte()
-		zonaPuntos.innerHTML=puntos+"/"+racha
+		zonaPuntos.innerHTML="<spam>puntos:  </spam>"+puntos+"/"+racha
 		if(racha>=2){
 			racha=0
 			tiempo+=30
-			zonaTiempo.innerHTML=	tiempo
+			zonaTiempo.innerHTML="seg: "+	tiempo
 		}
 	}
 	else{
+		malo.play()
 		tiempo-=5
-		zonaTiempo.innerHTML=	tiempo
+		zonaTiempo.innerHTML="seg: "+	tiempo
 	}
 	numerosCalcul[1]= Math.floor((Math.random() * (11-4))+4)
 	zonaTotal2.innerHTML=numerosCalcul[1]
@@ -377,19 +383,21 @@ function sumarContenidos3() {
 			suma += valor;
 	}
 	if(suma==parseInt(zonaTotal3.innerHTML)){
+		bueno.play()
 		puntos+=10
 		racha++
-		zonaPuntos.innerHTML=puntos+"/"+racha
+		zonaPuntos.innerHTML="<spam>puntos:  </spam>"+puntos+"/"+racha
 		pantallaMuerte()
 		if(racha>=2){
 			racha=0
 			tiempo+=30
-			zonaTiempo.innerHTML=	tiempo
+			zonaTiempo.innerHTML="seg: "+	tiempo
 		}
 	}
 	else{
+		malo.play()
 		tiempo-=5
-		zonaTiempo.innerHTML=	tiempo
+		zonaTiempo.innerHTML="seg: "+	tiempo
 	}
 	numerosCalcul[2]= Math.floor((Math.random() * (11-4))+4)
 	zonaTotal3.innerHTML=numerosCalcul[2]
@@ -398,14 +406,25 @@ function sumarContenidos3() {
 
 function contaTiempo() {
 		tiempo-=1
-		zonaTiempo.innerHTML=	tiempo
+		zonaTiempo.innerHTML="seg: "+	tiempo
 		if(tiempo==0){
+			zonaPuntos.style.display="none"
+			zonaTiempo.style.display="none"
+			zonaTotal1.style.display="none"
+			zonaTotal2.style.display="none"
+			zonaTotal3.style.display="none"
+			zonaCaida.style.display="none"
+			zonaEspera.style.display="none"
+			zonaResul3.style.display="none"
 			fin.style.display="flex"
-			fin.innerHTML="Game Over <br>"+puntos
+			fin.innerHTML="Game Over <br>"+puntos+" puntos<br> Volver a jugar"
 			clearInterval(juego)
 			clearInterval(crono)
 			zonaTitulo.style.color="white"
-			zonaTitulo.innerHTML=" "
+			zonaTitulo.innerHTML="NeoSumas"
+			gameover.play()
+			musica.pause()
+			fin.addEventListener("click", jugarOtra);
 		}
 	
 }
@@ -434,4 +453,23 @@ function pantallaMuerte() {
 		velocidad[2]+=0.5
 		velocidad[3]+=0.5
 	}
+}
+
+function jugarOtra(){
+  location.reload();
+}
+
+function music() {
+	fin.style.display="none"
+	musica.play()
+	bueno.play()
+	inicio()
+	zonaPuntos.style.display="flex"
+	zonaTiempo.style.display="flex"
+	zonaTotal1.style.display="flex"
+	zonaTotal2.style.display="flex"
+	zonaTotal3.style.display="flex"
+	zonaCaida.style.display="flex"
+	zonaEspera.style.display="flex"
+	zonaResul3.style.display="flex"
 }
