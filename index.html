@@ -11,17 +11,23 @@
 	<div class="interface">
 		<div class="zonaEspera" id="zonaEspera"></div>
 		<div class="zonaCaida" id="zonaCaida"></div>
-		<div class="zonaTiempo" id="zonaTiempo">60</div>
-		<div class="zonaPuntos" id="zonaPuntos">0</div>
+		<div class="zonaTiempo" id="zonaTiempo">seg: 60</div>
+		<div class="zonaPuntos" id="zonaPuntos"><spam>puntos:  </spam> 0</div>
 		<div class="zonaResul1" id="zonaResul1"></div>
 		<div class="zonaResul2" id="zonaResul2"></div>
 		<div class="zonaResul3" id="zonaResul3"></div>
 		<div class="zonaTotal1" id="zonaTotal1" onclick="sumarContenidos1()">2</div>
 		<div class="zonaTotal2" id="zonaTotal2" onclick="sumarContenidos2()">2</div>
 		<div class="zonaTotal3" id="zonaTotal3" onclick="sumarContenidos3()">2</div>
-		<div class="fin" id="fin">Game Over</div>
-		<div class="zonaTitulo" id="zonaTitulo">NeoSumas</div>
+		<div class="fin" id="fin" onclick="music()">Comenzar</div>
+		<div class="zonaTitulo" id="zonaTitulo" onclick="jugarOtra()">NeoSumas</div>
 	</div>
+	<audio src="musica.mp3" id="musica" loop ></audio>
+	<audio src="mover.mp3" id="mover" ></audio>
+	<audio src="malo.mp3" id="malo" ></audio>
+	<audio src="bueno.mp3" id="bueno" ></audio>
+	<audio src="gameover.mp3" id="gameover" ></audio>
+
 	<script src="js/funciones.js"></script>
 </body>
 </html>
