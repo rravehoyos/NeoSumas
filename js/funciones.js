@@ -407,7 +407,7 @@ function sumarContenidos3() {
 function contaTiempo() {
 		tiempo-=1
 		zonaTiempo.innerHTML="seg: "+	tiempo
-		if(tiempo==0){
+		if(tiempo<=0){
 			zonaPuntos.style.display="none"
 			zonaTiempo.style.display="none"
 			zonaTotal1.style.display="none"
