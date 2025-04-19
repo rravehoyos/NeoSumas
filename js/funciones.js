@@ -453,6 +453,24 @@ function pantallaMuerte() {
 		velocidad[2]+=0.5
 		velocidad[3]+=0.5
 	}
+	if(puntos==250){
+		velocidad[0]+=0.5
+		velocidad[1]+=0.5
+		velocidad[2]+=0.5
+		velocidad[3]+=0.5
+	}
+	if(puntos==300){
+		velocidad[0]+=0.5
+		velocidad[1]+=0.5
+		velocidad[2]+=0.5
+		velocidad[3]+=0.5
+	}
+	if(puntos==350){
+		velocidad[0]+=0.5
+		velocidad[1]+=0.5
+		velocidad[2]+=0.5
+		velocidad[3]+=0.5
+	}
 }
 
 function jugarOtra(){
