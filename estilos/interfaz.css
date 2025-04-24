@@ -66,6 +66,7 @@ spam{
       display: grid;
       grid-template-columns: repeat(10, 1fr);
       grid-template-rows: repeat(10, 1fr);
+      aspect-ratio: 1 / 1
     }
     .zonaEspera{
       padding-top: 3vh;
@@ -359,6 +360,7 @@ spam{
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: repeat(8, 1fr);
+      aspect-ratio: 1 / 1
     }
     .zonaEspera{
       padding-top: 3vh;
