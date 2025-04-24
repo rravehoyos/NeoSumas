@@ -158,6 +158,8 @@ spam{
       grid-column:8/10;
       grid-row: 4/6;
       background:url(../img/nube.png)no-repeat;
+      min-width:200px ;
+			min-height:200px ;
       background-size: cover;
       justify-content: center; /* Centra horizontalmente */
       align-items: center; /* Centra verticalmente */
@@ -176,6 +178,8 @@ spam{
       grid-column:8/10;
       grid-row: 6/8;
       background:url(../img/nube.png)no-repeat;
+      min-width:200px ;
+			min-height:200px ;
       background-size: cover;
       display: none;
       justify-content: center; /* Centra horizontalmente */
@@ -194,6 +198,8 @@ spam{
       grid-column:8/10;
       grid-row: 8/10;
       background:url(../img/nube.png)no-repeat;
+      min-width:200px ;
+			min-height:200px ;
       background-size: cover;
       display: none;
       justify-content: center; /* Centra horizontalmente */
@@ -226,6 +232,8 @@ spam{
     height: 6.5vh;
     width: 5vw;
     background:url(../img/nube.png)no-repeat;
+    min-width:200px ;
+		min-height:200px ;
     background-size: cover;
     font-size: 3vw;
     color: royalblue;
@@ -242,6 +250,8 @@ spam{
     height: 6.5vh;
     width: 5vw;
     background:url(../img/nube.png)no-repeat;
+    min-width:200px ;
+		min-height:200px ;
     background-size: cover;
     font-size: 3vw;
     color: royalblue;
