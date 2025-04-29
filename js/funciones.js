@@ -482,7 +482,11 @@ function music() {
 			fin.style.display="none"
 			musica.play()
 			bueno.play()
-			inicio()
+			if(bandera3==0){
+				inicio()
+				bandera3=1
+			}
+			
 			zonaPuntos.style.display="flex"
 			zonaTiempo.style.display="flex"
 			zonaTotal1.style.display="flex"
@@ -494,15 +498,30 @@ function music() {
 	}
 
 }
+bandera3=0
 bandera2=0
 function verificarOrientacion() {
     if (window.matchMedia("(orientation: portrait)").matches) {
         bandera2 = 1
         fin.innerHTML = "Dispon la pantalla <br> en horizontal";
-    } else {
+        emergencia() 
+    } 
+    else{
         fin.innerHTML = "Comenzar";
         bandera2 = 0
     }
+}
+function emergencia() {
+			zonaPuntos.style.display="none"
+			zonaTiempo.style.display="none"
+			zonaTotal1.style.display="none"
+			zonaTotal2.style.display="none"
+			zonaTotal3.style.display="none"
+			zonaCaida.style.display="none"
+			zonaEspera.style.display="none"
+			zonaResul3.style.display="none"
+			fin.style.display="flex"	
+			bandera2=2
 }
 
 // Ejecutar al cargar la página
