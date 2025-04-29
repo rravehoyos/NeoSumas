@@ -491,3 +491,19 @@ function music() {
 	zonaEspera.style.display="flex"
 	zonaResul3.style.display="flex"
 }
+bandera2=0
+function verificarOrientacion() {
+    if (window.matchMedia("(orientation: portrait)").matches) {
+        bandera2 = 1
+        fin.innerHTML = "Dispon la pantalla <br> en horizontal";
+    } else {
+        fin.innerHTML = "Comenzar";
+        bandera2 = 0
+    }
+}
+
+// Ejecutar al cargar la página
+window.addEventListener("load", verificarOrientacion)
+
+// Ejecutar cuando se cambia el tamaño de la ventana
+window.addEventListener("resize", verificarOrientacion)
