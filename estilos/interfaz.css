@@ -66,7 +66,6 @@ spam{
       display: grid;
       grid-template-columns: repeat(10, 1fr);
       grid-template-rows: repeat(10, 1fr);
-      aspect-ratio: 1 / 1
     }
     .zonaEspera{
       padding-top: 3vh;
@@ -158,8 +157,6 @@ spam{
       grid-column:8/10;
       grid-row: 4/6;
       background:url(../img/nube.png)no-repeat;
-      min-width:100px ;
-      min-height:100px ;
       background-size: cover;
       justify-content: center; /* Centra horizontalmente */
       align-items: center; /* Centra verticalmente */
@@ -178,8 +175,6 @@ spam{
       grid-column:8/10;
       grid-row: 6/8;
       background:url(../img/nube.png)no-repeat;
-      min-width:100px ;
-      min-height:100px ;
       background-size: cover;
       display: none;
       justify-content: center; /* Centra horizontalmente */
@@ -198,8 +193,6 @@ spam{
       grid-column:8/10;
       grid-row: 8/10;
       background:url(../img/nube.png)no-repeat;
-      min-width:100px ;
-			min-height:100px ;
       background-size: cover;
       display: none;
       justify-content: center; /* Centra horizontalmente */
@@ -232,8 +225,6 @@ spam{
     height: 6.5vh;
     width: 5vw;
     background:url(../img/nube.png)no-repeat;
-    min-width:100px ;
-		min-height:100px ;
     background-size: cover;
     font-size: 3vw;
     color: royalblue;
@@ -250,8 +241,6 @@ spam{
     height: 6.5vh;
     width: 5vw;
     background:url(../img/nube.png)no-repeat;
-    min-width:100px ;
-    min-height:100px ;
     background-size: cover;
     font-size: 3vw;
     color: royalblue;
@@ -267,8 +256,6 @@ spam{
     position: absolute;
     height: 6.5vh;
     width: 5vw;
-    min-width:100px ;
-    min-height:100px ;
     background:url(../img/nube.png)no-repeat;
     background-size: cover;
     font-size: 3vw;
@@ -285,8 +272,6 @@ spam{
     position: absolute;
     height: 6.5vh;
     width: 5vw;
-    min-width:100px ;
-    min-height:100px ;
     background:url(../img/nube.png)no-repeat;
     background-size: cover;
     font-size: 3vw;
@@ -310,10 +295,9 @@ spam{
     align-items: center; /* Centra verticalmente */
     display: flex;
     background:url(../img/nube.png)no-repeat;
-    min-width:100px ;
-    min-height:100px ;
     background-size: cover;
 }
+
 }
 
 
@@ -376,7 +360,6 @@ spam{
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: repeat(8, 1fr);
-      aspect-ratio: 1 / 1
     }
     .zonaEspera{
       padding-top: 3vh;
