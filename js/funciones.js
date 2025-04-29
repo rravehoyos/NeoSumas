@@ -478,18 +478,21 @@ function jugarOtra(){
 }
 
 function music() {
-	fin.style.display="none"
-	musica.play()
-	bueno.play()
-	inicio()
-	zonaPuntos.style.display="flex"
-	zonaTiempo.style.display="flex"
-	zonaTotal1.style.display="flex"
-	zonaTotal2.style.display="flex"
-	zonaTotal3.style.display="flex"
-	zonaCaida.style.display="flex"
-	zonaEspera.style.display="flex"
-	zonaResul3.style.display="flex"
+	if(bandera2==0){
+			fin.style.display="none"
+			musica.play()
+			bueno.play()
+			inicio()
+			zonaPuntos.style.display="flex"
+			zonaTiempo.style.display="flex"
+			zonaTotal1.style.display="flex"
+			zonaTotal2.style.display="flex"
+			zonaTotal3.style.display="flex"
+			zonaCaida.style.display="flex"
+			zonaEspera.style.display="flex"
+			zonaResul3.style.display="flex"
+	}
+
 }
 bandera2=0
 function verificarOrientacion() {
